@@ -229,6 +229,4 @@ atol/
 
 ---
 
-## 11. License
 
-(Choose one: MIT / Apache 2.0 / proprietary — placeholder pending decision.)
