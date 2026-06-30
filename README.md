@@ -1,4 +1,4 @@
-# ATOL — AI Token Optimization Layer
+# AITOL — AI Token Optimization Layer
 
 > Universal middleware that cuts AI API costs and latency by compressing, caching, routing, and compiling natural-language requests before they ever hit a model.
 
@@ -6,7 +6,7 @@
 
 ## 1. Overview
 
-**ATOL (AI Token Optimization Layer)** is a middleware layer that sits between an application and any LLM provider (OpenAI, Anthropic, Google, open-source models, etc.). It intercepts outgoing requests and applies a pipeline of optimizations — caching, compression, smart routing, and analytics — before the request reaches the model, and optimizes the response on the way back.
+**AITOL (AI Token Optimization Layer)** is a middleware layer that sits between an application and any LLM provider (OpenAI, Anthropic, Google, open-source models, etc.). It intercepts outgoing requests and applies a pipeline of optimizations — caching, compression, smart routing, and analytics — before the request reaches the model, and optimizes the response on the way back.
 
 The long-term evolution of the project adds an **MRL (Machine-Readable Language) compilation layer**: instead of sending verbose natural language to the model, ATOL compiles repeated/structural prompt patterns into compact structured bytecode that the model (or a lightweight interpreter) can execute faster and more cheaply.
 
@@ -24,7 +24,7 @@ The long-term evolution of the project adds an **MRL (Machine-Readable Language)
 | No visibility into spend | Token costs scale silently with usage |
 | Long system prompts re-sent every call | Fixed token tax on every request |
 
-ATOL is designed to be a **drop-in proxy** — change a base URL, not your application logic — and immediately start reducing spend.
+AITOL is designed to be a **drop-in proxy** — change a base URL, not your application logic — and immediately start reducing spend.
 
 ---
 
@@ -38,7 +38,7 @@ ATOL is designed to be a **drop-in proxy** — change a base URL, not your appli
                                         │
                                         ▼
                          ┌─────────────────────────────┐
-                         │         ATOL GATEWAY          │
+                         │         AITOL GATEWAY         │
                          │  (drop-in API-compatible      │
                          │   reverse proxy)              │
                          └──────────────┬───────────────┘
