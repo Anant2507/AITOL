@@ -8,9 +8,9 @@
 
 **AITOL (AI Token Optimization Layer)** is a middleware layer that sits between an application and any LLM provider (OpenAI, Anthropic, Google, open-source models, etc.). It intercepts outgoing requests and applies a pipeline of optimizations — caching, compression, smart routing, and analytics — before the request reaches the model, and optimizes the response on the way back.
 
-The long-term evolution of the project adds an **MRL (Machine-Readable Language) compilation layer**: instead of sending verbose natural language to the model, ATOL compiles repeated/structural prompt patterns into compact structured bytecode that the model (or a lightweight interpreter) can execute faster and more cheaply.
+The long-term evolution of the project adds an **MRL (Machine-Readable Language) compilation layer**: instead of sending verbose natural language to the model, AITOL compiles repeated/structural prompt patterns into compact structured bytecode that the model (or a lightweight interpreter) can execute faster and more cheaply.
 
-**Core thesis:** most AI token spend is *waste* — repeated context, redundant instructions, unnecessarily verbose prompts, and uncached duplicate queries. ATOL recovers that waste without the developer changing how they write prompts.
+**Core thesis:** most AI token spend is *waste* — repeated context, redundant instructions, unnecessarily verbose prompts, and uncached duplicate queries. AITOL recovers that waste without the developer changing how they write prompts.
 
 ---
 
@@ -38,7 +38,7 @@ AITOL is designed to be a **drop-in proxy** — change a base URL, not your appl
                                         │
                                         ▼
                          ┌─────────────────────────────┐
-                         │         AITOL GATEWAY         │
+                         │         AITOL GATEWAY          │
                          │  (drop-in API-compatible      │
                          │   reverse proxy)              │
                          └──────────────┬───────────────┘
@@ -143,7 +143,7 @@ AITOL is designed to be a **drop-in proxy** — change a base URL, not your appl
 ## 7. Repository Structure (Suggested)
 
 ```
-atol/
+aitol/
 ├── gateway/                # API-compatible reverse proxy
 │   ├── routes/
 │   └── middleware/
@@ -181,7 +181,7 @@ atol/
 ## 8. Phased Build Roadmap
 
 **Phase 1 — Core Proxy (Weeks 1–3)**
-- Basic gateway that passes requests through unchanged to one provider (Anthropic).
+- Basic gateway that passes requests through unchanged to one provider (OPEN ROUTER).
 - Exact-match caching only.
 - Basic request/response logging.
 
@@ -229,4 +229,6 @@ atol/
 
 ---
 
+## 11. License
 
+(Choose one: MIT / Apache 2.0 / proprietary — placeholder pending decision.)

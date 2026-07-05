@@ -1,0 +1,4 @@
+{
+  "prompt": "Fix this function:\n```typescript\nfunction calculateAverageOfNumbers(numberArray: number[]): number {\n  let totalSum = 0;\n  for (let index = 0; index < numberArray.length; index++) {\n    totalSum += numberArray[index];\n  }\n  return totalSum / numberArray.length;\n}\n```",
+  "model": "openai/gpt-3.5-turbo"
+}
