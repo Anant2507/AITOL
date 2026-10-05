@@ -1,7 +1,12 @@
 node_modules
 .env
+.env.*
+!.env.example
 aitol.db
+dist/
 venv/
+.venv/
+.next/
 __pycache__/
 *.pyc
 .vscode/
